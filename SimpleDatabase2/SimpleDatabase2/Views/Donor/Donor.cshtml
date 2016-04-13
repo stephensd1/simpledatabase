@@ -1,0 +1,86 @@
+﻿@model IEnumerable<SimpleDatabase2.Models.Donor>
+@{
+    ViewBag.Title = "Donor";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    <a href="/donor/createdonor">Create New Donor</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Phone
+        </th>
+        <th>
+            Street Name
+        </th>
+        <th>
+            Street Number
+        </th>
+        <th>
+            Suite Number
+        </th>
+        <th>
+            City 
+        </th>
+        <th>
+            State
+        </th>
+        <th>
+            Zip Code
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>
+                @donor.Donor_ID
+            </td>
+            <td>
+                @donor.Donor_Name
+            </td>
+            <td>
+                @donor.Donor_Email
+            </td>
+            <td>
+                @donor.Donor_Phone
+            </td>
+            <td>
+                @donor.Street_Name
+            </td>
+            <td>
+                @donor.Street_Number
+            </td>
+            <td>
+                @donor.Suite_Number
+            </td>
+            <td>
+                @donor.Donor_City
+            </td>
+            <td>
+                @donor.Donor_State
+            </td>
+            <td>
+                @donor.Donor_Zip
+            </td>
+            <td>
+                <a href="/donor/viewdonor/@donor.Donor_ID">View</a> |
+                <a href="/donor/editdonor/@donor.Donor_ID">Edit</a> |
+                <a href="/donor/deletedonor/@donor.Donor_ID">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
