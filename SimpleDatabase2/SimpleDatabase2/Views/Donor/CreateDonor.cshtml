@@ -1,0 +1,81 @@
+﻿@model SimpleDatabase2.Models.Donor
+@{
+    ViewBag.Title = "Create New Donor";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<form method="post" action="/home/create">
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <label for="Donor_name" class="control-label col-md-2">Name:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_Name" name="Donor_Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Donor_Email" class="control-label col-md-2">Email:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_Email" name="Donor_Email" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Donor_Phone" class="control-label col-md-2">Phone:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_Phone" name="Donor_Phone" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Street_Name" class="control-label col-md-2">Street Name:</label>
+            <div class="col-md-10">
+                <input type="text" id="Street_Name" name="Street_Name" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Street_Number" class="control-label col-md-2">Street Number:</label>
+            <div class="col-md-10">
+                <input type="text" id="Street_Number" name="Street_Number" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Suite_Number" class="control-label col-md-2">Suite Number:</label>
+            <div class="col-md-10">
+                <input type="text" id="Suite_Number" name="Suite_Number" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Donor_City" class="control-label col-md-2">City:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_City" name="Donor_City" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Donor_State" class="control-label col-md-2">State:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_State" name="Donor_State" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Donor_Zip" class="control-label col-md-2">Zip Code:</label>
+            <div class="col-md-10">
+                <input type="text" id="Donor_Zip" name="Donor_Zip" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="/donor/donor">Back to List</a>
+</div>
